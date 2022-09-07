@@ -5,14 +5,13 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-
-# Step 2
+dockerpath=newimage
 # Run the Docker Hub container with kubernetes
-
+kubectl run $dockerpath --image=emmbanga/newimage:v1pro3 --port=80
 
 # Step 3:
 # List kubernetes pods
-
+kubectl get pod
 # Step 4:
 # Forward the container port to a host
-
+kubectl port-forward newimage 8000:80
